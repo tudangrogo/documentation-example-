@@ -3,12 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Example's documentation!
-===================================
+Welcome to Rogo ESP32 SDK documentation!
+========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :caption: Contents:
 
+   Get_started.md
+   linux_mac_install.rst
    some-feature.md
    another-feature.md

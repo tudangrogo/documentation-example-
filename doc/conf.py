@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Example'
+project = 'ROGO ESP32 WILE SDK'
 copyright = 'workshop participant'
 author = 'workshop participant'
 release = '0.1'
