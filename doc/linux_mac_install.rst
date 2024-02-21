@@ -11,7 +11,7 @@ This is a detailed roadmap to walk you through the installation process.
 Setting up Development Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These are the steps for setting up the ROGO_ESP32_WILE_SDK for your OEM WILE device.
+These are the steps for setting up the ROGO_ESP32_WILE_SDK for your WILE device.
 
 * :ref:`get-started-prerequisites`
 * :ref:`get-started-get-esp-idf`
@@ -24,7 +24,7 @@ These are the steps for setting up the ROGO_ESP32_WILE_SDK for your OEM WILE dev
 Step 1. Install Prerequisites
 =============================
 
-In order to use ROGO_ESP32_WILE_SDK with the OEM WILE device, you need to install some software packages based on your Operating System. This setup guide helps you on getting everything installed on Linux and macOS based systems.
+In order to use ROGO_ESP32_WILE_SDK with the WILE device, you need to install some software packages based on your Operating System. This setup guide helps you on getting everything installed on Linux and macOS based systems.
 
 For Linux Users
 ~~~~~~~~~~~~~~~
@@ -122,7 +122,7 @@ Below is an overview of the steps to install Python 3.
 Step 2. Get ROGO_ESP32_WILE_SDK
 ===============================
 
-To build applications for the OEM WILE device, you need the software libraries provided by Espressif in `ROGO_ESP32_WILE_SDK repository <https://github.com/espressif/esp-idf>`_.
+To build applications for the WILE device, you need the software libraries provided by Espressif in `ROGO_ESP32_WILE_SDK repository <https://github.com/espressif/rogo-esp32-sdk>`_.
 
 To get ROGO_ESP32_WILE_SDK, navigate to your installation directory and clone the repository with ``git clone``, following instructions below specific to your operating system.
 
@@ -132,9 +132,9 @@ Open Terminal, and run the following commands:
     
     mkdir -p ~/esp
     cd ~/esp
-    git clone -b v5.2 --recursive https://github.com/espressif/esp-idf.git
+    git clone -b dev/v5.1.1 --recursive https://github.com/RogoSolutions/rogo-esp32-sdk.git
 
-ROGO_ESP32_WILE_SDK is downloaded into ``~/esp/esp-idf``.
+ROGO_ESP32_WILE_SDK is downloaded into ``~/esp/rogo-esp32-sdk``.
 
 Consult :doc:`/versions` for information about which ROGO_ESP32_WILE_SDK version to use in a given situation.
 
@@ -143,46 +143,46 @@ Consult :doc:`/versions` for information about which ROGO_ESP32_WILE_SDK version
 Step 3. Set up the Tools
 ========================
 
-Aside from the ROGO_ESP32_WILE_SDK, you also need to install the tools used by ROGO_ESP32_WILE_SDK, such as the compiler, debugger, Python packages, etc, for projects supporting OEM WILE device.
+Aside from the ROGO_ESP32_WILE_SDK, you also need to install the tools used by ROGO_ESP32_WILE_SDK, such as the compiler, debugger, Python packages, etc, for projects supporting WILE device.
 
 .. code-block:: bash
 
-    cd ~/esp/esp-idf
+    cd ~/esp/rogo-esp32-sdk
     ./install.sh esp32c3
 
 or with Fish shell
 
 .. code-block:: fish
 
-    cd ~/esp/esp-idf
+    cd ~/esp/rogo-esp32-sdk
     ./install.fish esp32c3
 
-The above commands install tools for OEM WILE device with esp32c3 chip only. Currently Rogo ESP32 WILE SDK only supports ESP32C3, other ESP32 chip platform may also works but will not be guaranteed, functions wise  
+The above commands install tools for WILE device with esp32c3 chip only. Currently Rogo ESP32 WILE SDK only supports ESP32C3, other ESP32 chip platform may also works but will not be guaranteed, functions wise  
 
 .. .. code-block:: bash
 
-..     cd ~/esp/esp-idf
+..     cd ~/esp/rogo-esp32-sdk
 ..     ./install.sh esp32,esp32s2
 
 .. or with Fish shell
 
 .. .. code-block:: fish
 
-..     cd ~/esp/esp-idf
+..     cd ~/esp/rogo-esp32-sdk
 ..     ./install.fish esp32,esp32s2
 
 .. In order to install tools for all supported targets please run the following command:
 
 .. .. code-block:: bash
 
-..     cd ~/esp/esp-idf
+..     cd ~/esp/rogo-esp32-sdk
 ..     ./install.sh all
 
 .. or with Fish shell
 
 .. .. code-block:: fish
 
-..     cd ~/esp/esp-idf
+..     cd ~/esp/rogo-esp32-sdk
 ..     ./install.fish all
 
 .. note::
@@ -190,7 +190,7 @@ The above commands install tools for OEM WILE device with esp32c3 chip only. Cur
 
      <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:xxx)
 
-   You may run ``Install Certificates.command`` in the Python folder of your computer to install certificates. For details, see `Download Error While Installing ROGO_ESP32_WILE_SDK Tools <https://github.com/espressif/esp-idf/issues/4775>`_.
+   You may run ``Install Certificates.command`` in the Python folder of your computer to install certificates. For details, see `Download Error While Installing ROGO_ESP32_WILE_SDK Tools <https://github.com/espressif/rogo-esp32-sdk/issues/4775>`_.
 
 Alternative File Downloads
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -203,7 +203,7 @@ To prefer the Espressif download server when installing tools, use the following
 
 .. code-block:: bash
 
-    cd ~/esp/esp-idf
+    cd ~/esp/rogo-esp32-sdk
     export IDF_GITHUB_ASSETS="dl.espressif.com/github_assets"
     ./install.sh
 
@@ -212,7 +212,7 @@ To prefer the Espressif download server when installing tools, use the following
 
     .. code-block:: bash
 
-        cd ~/esp/esp-idf
+        cd ~/esp/rogo-esp32-sdk
         export IDF_GITHUB_ASSETS="dl.espressif.cn/github_assets"
         ./install.sh
 
@@ -234,13 +234,13 @@ In the terminal where you are going to use ROGO_ESP32_WILE_SDK, run:
 
 .. code-block:: bash
 
-    . $HOME/esp/esp-idf/export.sh
+    . $HOME/esp/rogo-esp32-sdk/export.sh
 
 or for fish (supported only since fish version 3.0.0):
 
 .. code-block:: bash
 
-    . $HOME/esp/esp-idf/export.fish
+    . $HOME/esp/rogo-esp32-sdk/export.fish
 
 Note the space between the leading dot and the path!
 
@@ -250,7 +250,7 @@ If you plan to use esp-idf frequently, you can create an alias for executing ``e
 
     .. code-block:: bash
 
-        alias get_idf='. $HOME/esp/esp-idf/export.sh'
+        alias get_idf='. $HOME/esp/rogo-esp32-sdk/export.sh'
 
 2.  Refresh the configuration by restarting the terminal session or by running ``source [path to profile]``, for example, ``source ~/.bashrc``.
 
@@ -264,8 +264,11 @@ Technically, you can add ``export.sh`` to your shell's profile directly; however
 .. _get-started-connect:
 .. _get-started-linux-macos-first-steps:
 
+.. _rst_anchor:
+
 Step 5. First Steps on ROGO_ESP32_WILE_SDK
 ==========================================
+
 
 .. include:: linux-macos-start-project.rst
 .. include:: start-project.rst

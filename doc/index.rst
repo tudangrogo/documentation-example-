@@ -12,5 +12,5 @@ Welcome to Rogo ESP32 SDK documentation!
 
    Get_started.md
    linux_mac_install.rst
-   some-feature.md
+   wile_project_start.md
    another-feature.md
