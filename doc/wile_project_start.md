@@ -94,25 +94,47 @@ Inside currently there is only one option `WILE Configuration`
     Project configuration - Component Config - WILE
 
 ```
+Currently, you can choose to **enable/disable Wile**, and set the **product ID** here. 
 
 ```{eval-rst}
 .. figure:: ../doc/picture/wile6.png
     :align: center
-    :alt: Project configuration - Component Config - WILE
+    :alt: Project configuration - Component Config - WILE - WILE Configuration
 
-    Project configuration - Component Config - WILE
+    Project configuration - Component Config - WILE - WILE Configuration
 
 ```
--> WILE Configuration
-## Subsection
 
-Exciting documentation in here.
-Let's make a list (empty surrounding lines required):
+```{eval-rst}
+.. figure:: ../doc/picture/wile8.png
+    :align: center
+    :alt: Project configuration - Component Config - WILE - WILE Configuration - Device product ID
 
-- item 1
+    Project configuration - Component Config - WILE - WILE Configuration - Device product ID
 
-  - nested item 1
-  - nested item 2
+```
+The **Product ID** is an unique ID of your product, which is **registered to Rogo** with unique set of feature. For this example you can just leave the default Product ID, the default product ID is a 4 buttons switch. 
 
-- item 2
-- item 3
+In order to obtain **your own product ID** for your devices with unique features , you can create one on Rogo's Dashboard following [this](https://iot.rogo.com.vn/org/docs) instruction. 
+
+
+## Build, Flash, and Monitor
+After finished **Configure Your Project** you can start building the example, the building process is identical to a normal projects, if you run into any problem, refer to [this](./start-project.rst)
+
+If everything has been done correctly your monitor output should look like this :
+
+```{eval-rst}
+.. figure:: ../doc/picture/wile_log.png
+    :align: center
+    :alt: Output log of the wile_switch example at the first run
+
+    Output log of the wile_switch example at the first run
+
+```
+## Exploring the wile_switch example
+
+### Adding device to Rogo app
+### Controlling devices
+### Automation
+
+After toying with the wile_switch 

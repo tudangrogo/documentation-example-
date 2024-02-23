@@ -430,7 +430,7 @@ See also:
 - :doc:`IDF Monitor <../api-guides/tools/idf-monitor>` for handy shortcuts and more details on using IDF monitor.
 - :ref:`idf.py` for a full reference of ``idf.py`` commands and options.
 
-**That is all that you need to get started with |IDF_TARGET_NAME|!**
+**That is all that you need to get started with |IDF_TARGET_NAME| !**
 
 Now you are ready to try some other :idf:`examples`, or go straight to developing your own applications.
 
