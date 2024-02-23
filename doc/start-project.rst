@@ -513,4 +513,4 @@ For erasing the OTA data, if present, you can run this command:
 
 The flash erase command can take a while to be done. Do not disconnect your device while the flash erasing is in progress.
 
-.. |IDF_TARGET_NAME| replace:: WILE device
+.. |IDF_TARGET_NAME| replace:: WILE ESP32 device

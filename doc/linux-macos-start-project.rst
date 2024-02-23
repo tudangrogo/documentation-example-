@@ -95,4 +95,4 @@ You are using this menu to set up project specific variables, e.g., Wi-Fi networ
     3. Save the new configuration and exit the ``menuconfig`` screen.
 
 
-.. |IDF_TARGET_NAME| replace:: WILE device
+.. |IDF_TARGET_NAME| replace:: WILE ESP32 device

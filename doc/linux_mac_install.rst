@@ -11,7 +11,7 @@ This is a detailed roadmap to walk you through the installation process.
 Setting up Development Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These are the steps for setting up the ROGO_ESP32_WILE_SDK for your WILE device.
+These are the steps for setting up the ROGO_ESP32_WILE_SDK for your WILE ESP32 device.
 
 * :ref:`get-started-prerequisites`
 * :ref:`get-started-get-esp-idf`
@@ -24,7 +24,7 @@ These are the steps for setting up the ROGO_ESP32_WILE_SDK for your WILE device.
 Step 1. Install Prerequisites
 =============================
 
-In order to use ROGO_ESP32_WILE_SDK with the WILE device, you need to install some software packages based on your Operating System. This setup guide helps you on getting everything installed on Linux and macOS based systems.
+In order to use ROGO_ESP32_WILE_SDK with the WILE ESP32 device, you need to install some software packages based on your Operating System. This setup guide helps you on getting everything installed on Linux and macOS based systems.
 
 For Linux Users
 ~~~~~~~~~~~~~~~
@@ -122,7 +122,7 @@ Below is an overview of the steps to install Python 3.
 Step 2. Get ROGO_ESP32_WILE_SDK
 ===============================
 
-To build applications for the WILE device, you need the software libraries provided by Espressif in `ROGO_ESP32_WILE_SDK repository <https://github.com/espressif/rogo-esp32-sdk>`_.
+To build applications for the WILE ESP32 device, you need the software libraries provided by Espressif in `ROGO_ESP32_WILE_SDK repository <https://github.com/espressif/rogo-esp32-sdk>`_.
 
 To get ROGO_ESP32_WILE_SDK, navigate to your installation directory and clone the repository with ``git clone``, following instructions below specific to your operating system.
 
@@ -143,7 +143,7 @@ Consult :doc:`/versions` for information about which ROGO_ESP32_WILE_SDK version
 Step 3. Set up the Tools
 ========================
 
-Aside from the ROGO_ESP32_WILE_SDK, you also need to install the tools used by ROGO_ESP32_WILE_SDK, such as the compiler, debugger, Python packages, etc, for projects supporting WILE device.
+Aside from the ROGO_ESP32_WILE_SDK, you also need to install the tools used by ROGO_ESP32_WILE_SDK, such as the compiler, debugger, Python packages, etc, for projects supporting WILE ESP32 device.
 
 .. code-block:: bash
 
@@ -157,7 +157,7 @@ or with Fish shell
     cd ~/esp/rogo-esp32-sdk
     ./install.fish esp32c3
 
-The above commands install tools for WILE device with esp32c3 chip only. Currently Rogo ESP32 WILE SDK only supports ESP32C3, other ESP32 chip platform may also works but will not be guaranteed, functions wise  
+The above commands install tools for WILE ESP32 device with esp32c3 chip only. Currently Rogo ESP32 WILE SDK only supports ESP32C3, other ESP32 chip platform may also works but will not be guaranteed, functions wise  
 
 .. .. code-block:: bash
 

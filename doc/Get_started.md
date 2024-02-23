@@ -27,7 +27,9 @@ After install the **necessary tools and dependency** with **Manual installation*
 -   Windows: to be updated 
 ```
 
-After you familiar with the  
+After you familiar with a simple project let's get started with a Wi-LE project with this [Wi-LE example](./wile_project_start.md ':)').
+
+
 
 
 If you **installed with IDE** there will be an **instruction on the IDE extension** which is self elaboration.
