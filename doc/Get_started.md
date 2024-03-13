@@ -9,15 +9,15 @@ Rogo ESP32 WILE SDK is based on the ESP-IDF version 5.1.1 release with added pro
 
 ### Manual installation 
 
-[Linux and macOS](./linux_mac_install.rst ':)')
+- [Linux and macOS](./linux_mac_install.rst ':)')
 
 **Windows** *(to be updated)*
 
-### Install with IDE  
+### Install with IDE (VScode extension) 
 *This method is highly recommended to novice users by **Espressif**! However the author of this docs find it subjectively confusing and recommend to install it manually especially if you are using **MacOS or Linux***
 
-[Install using VScode extension](./vscode_extesion.md ':)')
-
+- [Linux and macOS](./vscode_extesion_linux_macos.md ':)')
+- 
 
 ## Build Your First Project !
 After install the **necessary tools and dependency** with **Manual installation**, if you never work with **ESP-IDF** before you can get start with simple projects. *e.g blink, hello-world,.....* by following build and flash instructions :
