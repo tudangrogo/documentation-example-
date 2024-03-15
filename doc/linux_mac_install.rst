@@ -122,7 +122,7 @@ Below is an overview of the steps to install Python 3.
 Step 2. Get ROGO_ESP32_WILE_SDK
 ===============================
 
-To build applications for the WILE ESP32 device, you need the software libraries provided by Espressif in `ROGO_ESP32_WILE_SDK repository <https://github.com/espressif/rogo-esp32-sdk>`_.
+To build applications for the WILE ESP32 device, you need the software libraries in `ROGO_ESP32_WILE_SDK repository <https://github.com/espressif/rogo-esp32-sdk>`_.
 
 To get ROGO_ESP32_WILE_SDK, navigate to your installation directory and clone the repository with ``git clone``, following instructions below specific to your operating system.
 

@@ -99,8 +99,27 @@ Below is an overview of the steps to install Python 3.
 
 .. _get-started-get-esp-idf:
 ```
+## Step 2 Download ROGO_ESP32_WILE_SDK
 
-## Step 2 Install VScode extension 
+To get ROGO_ESP32_WILE_SDK, navigate to your installation directory and clone the repository with ``git clone``, following instructions below specific to your operating system.
+
+Open Terminal, and run the following commands:
+
+.. code-block:: bash
+    
+    mkdir -p ~/esp
+    cd ~/esp
+    git clone -b dev/v5.1.1 --recursive https://github.com/RogoSolutions/rogo-esp32-sdk.git
+
+ROGO_ESP32_WILE_SDK is downloaded into ``~/esp/rogo-esp32-sdk``.
+
+**Alternatively** you can also directly download from the [ROGO_ESP32_WILE_SDK's github page](https://github.com/RogoSolutions/rogo-esp32-sdk/tree/dev/v5.1.1)
+
+<p>
+  <img src="../doc/picture/gitdw.png" alt="download zip file of the ROGO_ESP32_WILE_SDK " >
+</p>
+
+## Step 3 Install VScode extension and ROGO_ESP32_WILE_SDK
 Download and install [Visual Studio Code](https://code.visualstudio.com/).
 
 Open the **Extensions** view by clicking on the Extension icon in the Activity Bar on the side of Visual Studio Code or the **View: Extensions** command (shortcut: <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>X</kbd> or <kbd>Ctrl+Shift+X</kbd>.
@@ -145,7 +164,7 @@ If you choose **Express** setup mode:
   - Choose the location for ESP-IDF Tools and python virtual environment (also known as `IDF_TOOLS_PATH`) which is `$HOME\.espressif` on MacOS/Linux and `%USERPROFILE%\.espressif` on Windows by default.
     > **NOTE:** Windows users don't need to select a python executable since it is part of the setup. -->
 <!-- (or **Use Existing Setup** if ESP-IDF is already installed) -->
-Choose **Advanced** option 
+<!-- Choose **Advanced** option  -->
 <!-- <p>
   <img src="../doc/picture/vsc4.png" alt="Advance install" width="950">
 </p>
@@ -163,22 +182,27 @@ The user will see a page showing the setup progress status showing ESP-IDF downl
   <img src="../doc/picture/install-status.png" alt="Install status" width="950">
 </p> -->
 
-(OPTIONAL) If the user have chosen the **Advanced** option, after ESP-IDF is downloaded and extracted, select to either download ESP-IDF Tools or manually provide each ESP-IDF tool absolute path and required environment variables.
+Choose **Advanced** option, after ESP-IDF is downloaded and extracted, select to either download ESP-IDF Tools or manually provide each ESP-IDF tool absolute path and required environment variables.
     > **NOTE:** Consider that `IDF_PATH` requires each ESP-IDF tool to be of the version described in `IDF_PATH`/tools/tools.json.
-    > If it is desired to use a different ESP-IDF tool version, check [JSON Manual Configuration](../SETUP.md#JSON-Manual-Configuration)
+    > If it is desired to use a different ESP-IDF tool version, check [JSON Manual Configuration](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/SETUP.md#JSON-Manual-Configuration)
 
 <p>
-  <img src="../doc/picture/advanced.png" alt="Select ESP-IDF Tools" width="950">
+  <img src="../doc/picture/vsc4.png" alt="Select ESP-IDF Tools" width="950">
 </p>
 
-(OPTIONAL) If the user has chosen the **Advanced** mode and selected to manually provide each ESP-IDF tool absolute path, please enter the executable container directory for each binary as shown below:
-    > **NOTE:** Check [JSON Manual Configuration](../SETUP.md#JSON-Manual-Configuration) for more information.
+Next step, the user will be asked how to install the ESP_IDF tools, the user can just leave the default option of **Download ESP-IDF tools**
+<p>
+  <img src="../doc/picture/vsc5.png" alt="Select ESP-IDF Tools" width="950">
+</p>
+
+Otherwise, if the user already installed the ESP-IDF tools, and want to use them , they can select  **Use existing ESP-IDF tools** and provide the absolute path, please enter the executable container directory for each binary as shown below:
+    > **NOTE:** Check [JSON Manual Configuration](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/SETUP.md#JSON-Manual-Configuration) for more information.
 
 <p>
   <img src="../doc/picture/advanced-manual.png" alt="Enter ESP-IDF Tools paths manually" width="950">
 </p>
 
-If everything is installed correctly, the user will see a message that all settings have been configured. You can start using the extension.
+If everything is installed **correctly**, the user will see a message that all settings have been configured. You can start using the extension.
 
 <p>
   <img src="../doc/picture/install-complete.png" alt="Install complete">
@@ -190,12 +214,9 @@ Now that the extension setup is finally done, check the [Basic use](./basic_use.
 
 > **NOTE**: Visual Studio Code has many places where to set configuration settings. This extension uses the `idf.saveScope` configuration setting to determine where to save settings, Global (User Settings), Workspace and WorkspaceFolder. Please review [vscode settings precedence](https://code.visualstudio.com/docs/getstarted/settings#_settings-precedence).
 
-> **NOTE:** the setup wizard will install ESP-IDF Python packages and ESP-IDF debug adapter (`EXTENSION_PATH`/esp_debug_adapter/requirements.txt) python packages. Make sure that if using an existing python virtual environment that installing these packages doesn't affect your virtual environment. The `EXTENSION_PATH` is:
+> **NOTE:** the setup wizard will install ESP-IDF Python packages and ESP-IDF debug adapter (`EXTENSION_PATH`/esp_debug_adapter/requirements.txt) python packages. Make sure that if using an existing python virtual environment that installing these packages doesn't affect your virtual environment. The `EXTENSION_PATH` is: `$HOME/.vscode/extensions/espressif.esp-idf-extension-VERSION`
 
-- Windows: `%USERPROFILE%\.vscode\extensions\espressif.esp-idf-extension-VERSION`
-- Linux & MacOSX: `$HOME/.vscode/extensions/espressif.esp-idf-extension-VERSION`
-
-# Installing Nightly Build
+<!-- # Installing Nightly Build
 
 To install the nightly build follow the instructions below.
 
@@ -207,6 +228,11 @@ Nightly builds are available for <a href="https://nightly.link/espressif/vscode-
 - Browse to the VSIX file you downloaded
 - Wait for the extension to install
 - Click the Reload button on the VS Code notification that appears
+ -->
 
+> **NOTE:** [Troubleshooting](https://github.com/espressif/vscode-esp-idf-extension/blob/master/README.md#Troubleshooting)
+```{eval-rst}
+.. include:: vscode_linux-macos-start-project.rst
+.. include:: vscode_start_project.rst
 
-> **NOTE:** [Troubleshooting](../../README.md#Troubleshooting)
+```
