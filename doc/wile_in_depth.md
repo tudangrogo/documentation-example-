@@ -57,8 +57,39 @@ They are configurations in the SDK config which are needed to run Wi-le.
 The rest of the file is similar to the normal esp32 project .
 
 ### Kconfig.projbuild
-This file is for adding options, and configuration of your own into the **menuconfig**, these setting will be treated as *define* in file `sdkconfig.h` for example :
+This file belongs to the project configuration of the ESP-IDF, you can refer here for more details, below just a summary of how this work in the context of the **Wile_switch** which belongs to ROGO ESP32 SDK. 
+This file is for adding options, and configuration of your own into the **menuconfig**, these setting will be treated as *define* when including `sdkconfig.h` file.
+Note: that whenever you need to use any of the define variable, you can just include `sdkconfig.h` files, but the `sdkconfig.h` file itself doesn't exist, every definition will be written to `sdkconfig`, and the compiler will knows which definition belongs to `sdkconfig.h` and execute accordingly 'for example :
 
+```C
+menu "WiLe device"
+
+   ...
+
+    menu "Device configuration"      
+        config BOARD_TEST_ENABLE
+            bool "Enable factory board test"
+            default n
+    endmenu
+endmenu
+```
+In the `sdkconfig` file will have this definition :
+```C
+# Device configuration
+#
+# CONFIG_BOARD_TEST_ENABLE is not set
+# end of Device configuration
+# end of WiLe device
+```
+
+and if you want to use it in your source file :
+
+```{eval-rst}
+.. figure:: ../doc/picture/ex1.jpg
+    :align: center
+
+```
 
 
 ### idf_component.yml
+This is a manifest file which contains the components that user want to add bui

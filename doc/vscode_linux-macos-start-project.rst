@@ -30,25 +30,25 @@ Open VScode, click on Espressif logo on the left panel, you will be greeted with
 
 .. figure:: ../doc/picture/vsc_st_0.png
     :align: center
-    :alt: Project configuration - WILE device - Factory board test
+    :alt: IDF extension - Homepage
 
-    Project configuration - WILE device - Factory board test
+    IDF extension - Homepage
 
 Click on **import project** , a prompt windows will show up, navigate to `[Path to SDK]/examples/get-started/hello_world` and select the desired example, which is `hello_world`:
 
 .. figure:: ../doc/picture/vsc_st_00.png
     :align: center
-    :alt: Project configuration - WILE device - Factory board test
+    :alt: Choosing example folder 
 
-    Project configuration - WILE device - Factory board test
+    Choosing example folder 
 
 Then choose the location where you want to save/copy the example project to:
 
 .. figure:: ../doc/picture/vsc_st_01.png
     :align: center
-    :alt: Project configuration - WILE device - Factory board test
+    :alt: Prompt to select folder 
 
-    Project configuration - WILE device - Factory board test
+    Prompt to select folder 
 
 Then put in your project name.
 

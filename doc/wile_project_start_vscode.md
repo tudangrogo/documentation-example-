@@ -134,6 +134,9 @@ If everything has been done correctly your monitor output should look like this 
 ## Exploring the wile_switch example
 
 ### Adding device to Rogo app
+Getting the app: currently you can get the app b
+Currently 
+<!-- https://rogosmart-my.sharepoint.com/:u:/g/personal/tu_danganh_rogo_com_vn/EVHKtIYjBGhDm2RX4UCaRp4B01BJ-qbGxulfI8jtKfmJLA?email=tu.danganh%40rogo.com.vn&e=SKxPCk -->
 ### Controlling devices
 ### Automation
 
