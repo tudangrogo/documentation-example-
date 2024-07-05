@@ -124,7 +124,7 @@ After finished **Configure Your Project** you can start building the example, th
 If everything has been done correctly your monitor output should look like this :
 
 ```{eval-rst}
-.. figure:: ../doc/picture/wile_log.png
+.. figure:: ../doc/picture/wile_log2.png
     :align: center
     :alt: Output log of the wile_switch example at the first run
 
